@@ -38,49 +38,66 @@ Class Implementation*/
 
 
 public class Car {
-    
+   
     private String carName;
     private int milesDriven;
     private int gallonsUsed;
-    
+   
     public Car(){
         this.carName = "";
         this.milesDriven = 0;
         this.gallonsUsed=0;
     }
-    
+   
     public Car(String carName, int milesDriven, int gallonsUsed)
     {
         this.carName = carName;
         this.milesDriven = milesDriven;
         this.gallonsUsed = gallonsUsed;
     }
-    
+   
     public String getCarName() {
         return carName;
     }
-    
-    public void setCarName
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+    public void setCarName(String CN)
+    {
+        carName= CN;
+    }
+   
+    public int  getMilesDriven(){
+        return milesDriven;
+    }
+   
+    public void setMilesDriven(int MD)
+    {
+        milesDriven = MD;
+    }
+   
+    public int getGallonsUsed()
+    {
+        return gallonsUsed;
+    }
+    public void setGallonsUsed(int GU)
+    {
+        gallonsUsed = GU;
+    }
+   
+    public double calculateAverage()
+    {
+        double temp = milesDriven/gallonsUsed;
+        temp = Math.round(temp*10.0)/10.0;
+        return temp;
+    }
+   
+    public String toString()
+    {
+        return getCarName() + " averaged " + calculateAverage() + " m/g";
+    }
+   
+    public static void main(String[] args)
+    {
+       
+    }
+   
 }
-
